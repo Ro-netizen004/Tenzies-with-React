@@ -1,0 +1,179 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fredoka', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.App#light {
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+.App#dark {
+  background-color: #1a1a1a;;
+  color: #f9fafb;
+}
+
+
+
+/*Button css starts here*/
+
+#dark button {
+  background-color: #2c2c2c;
+  color: #eee;
+  border: 1px solid #444;
+  border-radius: 30px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#dark button:hover {
+  background-color: #3d3d3d;
+}
+
+#light button {
+  background-color: #fff;
+  color: #111;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#light button:hover {
+  background-color: #f2f2f2;
+}
+
+.theme-changer {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex; /* or inline-block */
+  align-items: center;
+  justify-content: center;
+}
+
+.mode-image {
+  width: 25px;  /* adjust size as needed */
+  height: 25px;
+  display: block;
+  pointer-events: none; /* so clicks register on button */
+  user-select: none;
+  margin-right: 10px;
+}
+
+button {
+  min-width: 150px;       /* fixed minimum width */
+  height: 42px;           /* fixed height */
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* spacing between image and text */
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  font-family: inherit;
+}
+
+.button-container{
+  display: flex;
+  gap:5px;
+}
+
+/* Button css ends here*/
+.die-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 50%;
+}
+
+.die-image {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.2s, border 0.2s;
+  border-radius: 8px;
+}
+
+/* Highlight style when die is held */
+.die-image.held {
+  transform: scale(1.1);
+  border: 3px solid #af964c; /* green border or any highlight color */
+  box-shadow: 0 0 10px #af964c;
+}
+
+.die-image {
+  width: 10vw;      /* Responsive to screen width */
+  max-width: 60px;  /* Limit the size on large screens */
+  height: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s, border 0.2s;
+}
+
+@media (max-width: 600px) {
+  .die-image {
+    width: 14vw;
+    max-width: 45px;
+  }
+}
+
+/* Base input styles */
+input[type="number"] {
+  padding: 8px 12px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline-offset: 2px;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+/* Light theme */
+#light input[type="number"] {
+  background-color: #fff;
+  color: #222;
+  border-color: #ccc;
+}
+
+#light input[type="number"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px #007bff44;
+}
+
+/* Dark theme */
+#dark input[type="number"] {
+  background-color: #222;
+  color: #eee;
+  border-color: #555;
+}
+
+#dark input[type="number"]:focus {
+  border-color: #66aaff;
+  box-shadow: 0 0 6px #66aaff88;
+}
