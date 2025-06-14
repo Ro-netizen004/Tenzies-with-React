@@ -1,3 +1,5 @@
+Link to site: https://tenzieswithreact.netlify.app/
+
 # 🎲 Tenzies Game with React
 
 A fun and interactive implementation of the **Tenzies Game** using React! Roll the dice until all of them show the same value. You can **hold** dice to lock in their values and change the theme between light and dark mode. Celebrate your win with 🎉 confetti and a party hat emoji!
